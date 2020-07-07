@@ -20,11 +20,9 @@ class PlotSquaredHook {
         PlotSquaredHook.api = new PlotAPI();
         plugin = main;
     }
-    
     public static boolean isPlotWorld(Location loc) {
         return api.getPlotSquared().hasPlotArea(loc.getWorld().getName());
     }
-
     public static boolean checkPermission(Player player, Location location) {
     	com.plotsquared.core.location.Location plotLocation = BukkitUtil.getLocation(location);
         PlotArea plotArea = plotLocation.getPlotArea();
